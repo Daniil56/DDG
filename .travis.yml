@@ -1,5 +1,6 @@
-install: gradle wrapper --gradle-version 5.4.1
 language: java
+install: gradle wrapper -gradle-version 5.4.1
+
 jdk:
   - oraclejdk9
 before_script:

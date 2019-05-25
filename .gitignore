@@ -1,3 +1,5 @@
 .idea/
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
 out/
 .java-version
