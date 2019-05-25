@@ -1,0 +1,37 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.5.RELEASE")
+    }
+}
+plugins {
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+
+group 'ddg.ru'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+repositories { jcenter() }
+dependencies { testImplementation 'org.mockito:mockito-core:2.7.22' }
+
+
+sourceCompatibility = 11
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+bootRun {
+    standardInput = System.in
+}
