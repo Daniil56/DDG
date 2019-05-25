@@ -1,5 +1,4 @@
 language: java
-install: gradle wrapper -gradle-version 5.4.1
 
 jdk:
   - oraclejdk9
