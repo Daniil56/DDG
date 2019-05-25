@@ -12,7 +12,7 @@ plugins {
 }
 
 apply plugin: 'io.spring.dependency-management'
-apply plugin: 'jacoco'
+
 
 group 'ddg.ru'
 version '1.0'
@@ -24,24 +24,13 @@ repositories { jcenter() }
 dependencies { testImplementation 'org.mockito:mockito-core:2.7.22' }
 
 
-sourceCompatibility = 9
+sourceCompatibility = 11
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
-}
 
-jacocoTestReport {
-    reports {
-        xml.enabled true
-        html.enabled false
-    }
-}
-
-check.dependsOn jacocoTestReport
 bootRun {
     standardInput = System.in
 }
